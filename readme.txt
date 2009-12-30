@@ -26,7 +26,7 @@ Extract the zip file and copy the folder "random-image-block" into the "wp-conte
 
 After the plugin in activated, you 'MUST' selected a category to be displayed before the widget will display on your sites sidebar.
 
-== FAQ ==
+== Frequently Asked Questions ==
 
 == Q: May I select more then one category to display? ==
 A: At this time, no you may only display a single category per widget.
