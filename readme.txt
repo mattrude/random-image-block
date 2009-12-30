@@ -16,11 +16,15 @@ The Random Image Block is a small plugin that will display a random image from y
 
 This widget will display the thumbnail of the random image, the "caption" and the images parent posts name. Random Image Widget was designed with full internationalization in mind and can be fully translated.
 
+After the plugin in activated, you 'MUST' selected a category to be displayed before the widget will display on your sites sidebar.
+
+If you have any problems or concerns with this plugin, please use my (Project Forum)[http://forum.mattrude.com/forum/random-image-block] to post you question.
+
 == Installation ==
 
 Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation and then activate the plugin from Plugins -> Installed page.
 
-After the plugin in activated, you *MUST* selected a category to be displayed before the widget will display on your sites sidebar.
+After the plugin in activated, you 'MUST' selected a category to be displayed before the widget will display on your sites sidebar.
 
 == FAQ ==
 
