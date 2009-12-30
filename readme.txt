@@ -18,7 +18,7 @@ This widget will display the thumbnail of the random image, the "caption" and th
 
 After the plugin in activated, you 'MUST' selected a category to be displayed before the widget will display on your sites sidebar.
 
-If you have any problems or concerns with this plugin, please use my (Project Forum)[http://forum.mattrude.com/forum/random-image-block] to post you question.
+If you have any problems or concerns with this plugin, please use my [Project Forum](http://forum.mattrude.com/forum/random-image-block) to post you question.
 
 == Installation ==
 
