@@ -24,10 +24,10 @@ After the plugin in activated, you *MUST* selected a category to be displayed be
 
 == Frequently Asked Questions ==
 
-Q: May I select more then one category to display?
+=== Q: May I select more then one category to display? ===
 A: At this time, no you may only display a single category per widget.
 
-Q: May I have more the one image on my sidebar?
+=== Q: May I have more the one image on my sidebar? ===
 A: Sure, just add a second or third widget to the sidebar, but you can't do it from within this widget.
 
 == Changelog ==
