@@ -16,7 +16,7 @@ class random_image_widget extends WP_Widget {
       if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('', $moFile);
     }
     $random_image_widget_name = __('Random Image Widget', 'mdr_random_image_widget');
-    $random_image_widget_description = __('Displays a random gallery image from the WordPress built in galleries.', 'mdr_random_image_widget');
+    $random_image_widget_description = __('Displays a random gallery image.', 'mdr_random_image_widget');
     $widget_ops = array('classname' => 'random_image_widget', 'description' => $random_image_widget_description );
     $this->WP_Widget('random_image_widget', $random_image_widget_name, $widget_ops);
   }  
@@ -80,7 +80,7 @@ class random_image_widget extends WP_Widget {
     $riw_widget_title = strip_tags($instance['widget_title']);
     $riw_cat_slug = strip_tags($instance['gallery_category']);
     ?><p><label for="<?php echo $this->get_field_id('widget_title'); ?>"><?php _e('Widget title', 'mdr_random_image_widget')?>:<input class="widefat" id="<?php echo $this->get_field_id('widget_title'); ?>" name="<?php echo $this->get_field_name('widget_title'); ?>" type="text" value="<?php echo attribute_escape($riw_widget_title); ?>" /></label></p><?php
-    ?><p><label for="<?php echo $this->get_field_id('gallery_category'); ?>"><?php _e('Gallery Category slug (only one)', 'mdr_random_image_widget')?>:<input class="widefat" id="<?php echo $this->get_field_id('gallery_category'); ?>" name="<?php echo $this->get_field_name('gallery_category'); ?>" type="text" value="<?php echo attribute_escape($riw_cat_slug); ?>" /></label></p><?php
+    ?><p><label for="<?php echo $this->get_field_id('gallery_category'); ?>"><?php _e('Category slug (only 1) required', 'mdr_random_image_widget')?>:<input class="widefat" id="<?php echo $this->get_field_id('gallery_category'); ?>" name="<?php echo $this->get_field_name('gallery_category'); ?>" type="text" value="<?php echo attribute_escape($riw_cat_slug); ?>" /></label></p><?php
   }
 }
 
