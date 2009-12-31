@@ -96,7 +96,7 @@ class random_image_widget extends WP_Widget {
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_cat_single" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('single_category'); ?>" name="<?php echo $this->get_field_name('single_category'); ?>" />
     <label for="<?php echo $this->get_field_id('single_category'); ?>"><?php _e('Display from a single Category?', 'mdr_random_image_widget')?></label></p>
 
-    <p><label for="<?php echo $this->get_field_id('gallery_category'); ?>"><?php _e('Category slug (only 1) required', 'mdr_random_image_widget')?>:<input class="widefat" id="<?php echo $this->get_field_id('gallery_category'); ?>" name="<?php echo $this->get_field_name('gallery_category'); ?>" type="text" value="<?php echo attribute_escape($riw_cat_slug); ?>" /></label></p><?php
+    <p><label for="<?php echo $this->get_field_id('gallery_category'); ?>"><?php _e('Category slug (only 1)', 'mdr_random_image_widget')?>:<input class="widefat" id="<?php echo $this->get_field_id('gallery_category'); ?>" name="<?php echo $this->get_field_name('gallery_category'); ?>" type="text" value="<?php echo attribute_escape($riw_cat_slug); ?>" /></label></p><?php
   }
 }
 
