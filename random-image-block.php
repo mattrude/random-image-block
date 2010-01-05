@@ -95,7 +95,7 @@ class random_image_widget extends WP_Widget {
     $riw_widget_title = strip_tags($instance['widget_title']);
     $riw_cat_single = $instance['single_category'];
     $riw_cat_slug = strip_tags($instance['gallery_category']);
-    ?><p><label for="<?php echo $this->get_field_id('widget_title'); ?>"><?php _e('Widget title', 'random-image-block')?>:<input class="widefat" id="<?php echo $this->get_field_id('widget_title'); ?>" name="<?php echo $this->get_field_name('widget_title'); ?>" type="text" value="<?php echo attribute_escape($riw_widget_title); ?>" /></label></p>
+    ?><p><label for="<?php echo $this->get_field_id('widget_title'); ?>"><?php _e('Sidebar title', 'random-image-block')?>:<input class="widefat" id="<?php echo $this->get_field_id('widget_title'); ?>" name="<?php echo $this->get_field_name('widget_title'); ?>" type="text" value="<?php echo attribute_escape($riw_widget_title); ?>" /></label></p>
 
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_cat_single" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('single_category'); ?>" name="<?php echo $this->get_field_name('single_category'); ?>" />
     <label for="<?php echo $this->get_field_id('single_category'); ?>"><?php _e('Display from a single Category?', 'random-image-block')?></label></p>
