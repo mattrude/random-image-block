@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Random Image Block\n"
+"Project-Id-Version: random-image-block\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/random-image-block\n"
 "POT-Creation-Date: 2010-01-10 18:04+0000\n"
 "PO-Revision-Date: \n"
