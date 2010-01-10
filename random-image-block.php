@@ -14,7 +14,7 @@ class random_image_widget extends WP_Widget {
     $currentLocale = get_locale();
     if(!empty($currentLocale)) {
       $moFile = dirname(__FILE__) . "/languages/random_image_widget_" .  $currentLocale . ".mo";
-      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('', $moFile);
+      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('random-image-block', $moFile);
     }
     $random_image_widget_name = __('Random Image Widget', 'random-image-block');
     $random_image_widget_description = __('Displays a random gallery image.', 'random-image-block');
