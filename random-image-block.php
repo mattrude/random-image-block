@@ -3,7 +3,7 @@
 Plugin Name: Random Image Block
 Plugin URI: http://mattrude.com/projects/random-image-block/
 Description: Display a random image from your native WordPress photo galley or in-beaded images.
-Version: 0.3
+Version: 0.4
 Author: Matt Rude
 Author URI: http://mattrude.com/
 */
