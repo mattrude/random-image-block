@@ -19,11 +19,13 @@ This widget will display the thumbnail of the random image, the "caption" and th
 As of Version 0.3 this plugin works out of the box without and configuraion (assuming you have pictures on your site).
 
 This Plugin is fully translated into the following languages:
+
 * French
 * German
 * Italian
 * Portuguese
 * Spanish
+
 If you would like to help translating this plugin into your language, or you see a problem with the current translation, please contact me.
 
 == Installation ==
