@@ -16,7 +16,7 @@ The Random Image Block is a small plugin that will display a random image from y
 
 This widget will display the thumbnail of the random image, the "caption" and the images parent posts name. You may show all pictures on your site, or limit the selection to a single category if you wish.  The Widgets title is also fully configurable. Random Image Widget was designed with full internationalization in mind and can be fully translated (Any help on this would be appreciated).
 
-As of Version 0.3 this plugin works out of the box without and configuraion (assuming you have pictures on your site).
+As of Version 0.3 this plugin works out of the box without any configuraion (assuming you have pictures on your site).
 
 This Plugin is fully translated into the following languages:
 
