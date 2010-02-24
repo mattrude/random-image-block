@@ -3,7 +3,7 @@
 Plugin Name: Random Image Block
 Plugin URI: http://mattrude.com/projects/random-image-block/
 Description: Display a random image from your native WordPress photo galley or in-beaded images.
-Version: 0.4
+Version: 0.5
 Author: Matt Rude
 Author URI: http://mattrude.com/
 */
@@ -14,7 +14,7 @@ class random_image_widget extends WP_Widget {
     $currentLocale = get_locale();
     if(!empty($currentLocale)) {
       $moFile = dirname(__FILE__) . "/languages/random_image_widget_" .  $currentLocale . ".mo";
-      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('', $moFile);
+      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('random-image-block', $moFile);
     }
     $random_image_widget_name = __('Random Image Widget', 'random-image-block');
     $random_image_widget_description = __('Displays a random gallery image.', 'random-image-block');
@@ -67,8 +67,7 @@ class random_image_widget extends WP_Widget {
           $meta = wp_get_attachment_metadata($imgid);
 
           // construct the image
-          echo "<div class='widget bookmarks widget-bookmarks'>";
-            echo "<h3 class='widget-title' >$riw_widget_title</h3>";
+            echo "{$before_widget}{$before_title}$riw_widget_title{$after_title}";
             echo "<div class='random-image'>";
               echo "<a href=".get_permalink( $imgid )." >";
               echo "<img width='".$meta['sizes']['thumbnail']['width']."'  height='".$meta['sizes']['thumbnail']['height']."' src='".wp_get_attachment_thumb_url($imgid)."' alt='Random image: ".$attachment->post_title."' />";
@@ -76,7 +75,7 @@ class random_image_widget extends WP_Widget {
               echo "<p class='random-image-caption'><strong>$attachment->post_excerpt</strong></p>";
               echo "<p class='random-image-album'><small>".__('Album:','random-image-block')." <a href=".get_permalink( $albumid ).">".get_the_title($albumid)."</a></small></p>";
             echo "</div>";
-          echo "</div>";
+          echo $after_widget;
           break;
 	}
       }
