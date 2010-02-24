@@ -45,8 +45,8 @@ A: Make sure you not using a category that dosen't have any pictures.
 
 == Screenshots ==
 
-1. screenshot1.jpg
-2. screenshot2.jpg
+1. The Random Image Block on the front page.
+2. The Wiget Admin page for the Random Image Block
 
 == Changelog ==
 
