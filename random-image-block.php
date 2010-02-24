@@ -25,9 +25,8 @@ class random_image_widget extends WP_Widget {
   function widget($args, $instance) {
     extract($args);
     $riw_widget_title = empty($instance['widget_title']) ? '&nbsp;' : apply_filters('widget_title', $instance['widget_title']);
-    $riw_cat_single = empty($instance['single_category']) ? 'off' : apply_filters('single_category', $instance['single_category']);
-    $riw_cat_id = empty($instance['gallery_category']) ? 'empty' : apply_filters('gallery_category', $instance['gallery_category']);
     $riw_center = empty($instance['center']) ? 'off' : apply_filters('center', $instance['center']);
+    $riw_cat_id = empty($instance['gallery_category']) ? '&nbsp;' : apply_filters('gallery_category', $instance['gallery_category']);
     global $wpdb;
 
     if ($riw_widget_title == "&nbsp;") {
@@ -40,10 +39,6 @@ class random_image_widget extends WP_Widget {
       $riw_center_output = "";
     }
 
-    if ($riw_cat_id == '-1') {
-      $riw_cat_single = "off";
-    }
-    
     $args = array(
        'post_type' => 'attachment',
        'post_mime_type' => 'image',
@@ -54,12 +49,12 @@ class random_image_widget extends WP_Widget {
     );
 
     $attachments = get_posts($args);
-
     $noimages = count($attachments);
     if ($attachments) {
       foreach ($attachments as $attachment) {
-        if ( $riw_cat_single == "on" ) {
+        if ( $riw_cat_id !== "-1" ) {
           $albumid = $attachment->post_parent;
+          //echo "on";
         } else {
           $albumid = $attachment->post_parent;
 	  foreach((get_the_category($albumid)) as $category) { 
@@ -92,7 +87,6 @@ class random_image_widget extends WP_Widget {
   function update($new_instance, $old_instance) {
     $instance = $old_instance;
     $instance['widget_title'] = strip_tags($new_instance['widget_title']);
-    $instance['single_category'] = strip_tags($new_instance['single_category']);
     $instance['gallery_category'] = strip_tags($new_instance['gallery_category']);
     $instance['center'] = strip_tags($new_instance['center']);
     return $instance;
@@ -101,18 +95,15 @@ class random_image_widget extends WP_Widget {
   function form($instance) {
     $riw_widget_title = strip_tags($instance['widget_title']);
     $riw_center = $instance['center'];
-    $riw_cat_single = $instance['single_category'];
     $riw_cat_id = strip_tags($instance['gallery_category']);
     ?><p><label for="<?php echo $this->get_field_id('widget_title'); ?>"><?php _e('Widget Title', 'random-image-block')?>:<input class="widefat" id="<?php echo $this->get_field_id('widget_title'); ?>" name="<?php echo $this->get_field_name('widget_title'); ?>" type="text" value="<?php echo attribute_escape($riw_widget_title); ?>" /></label></p>
 
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_center" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('center'); ?>" name="<?php echo $this->get_field_name('center'); ?>" />
     <label for="<?php echo $this->get_field_id('center'); ?>"><?php _e('Center the Image?', 'random-image-block')?></label></p>
 
-    <p><input class="checkbox" type="checkbox" <?php if ("$riw_cat_single" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('single_category'); ?>" name="<?php echo $this->get_field_name('single_category'); ?>" />
-    <label for="<?php echo $this->get_field_id('single_category'); ?>"><?php _e('Display from a single Category?', 'random-image-block')?></label>
-    <p><label for="<?php echo $this->get_field_id('gallery_category'); ?>"><?php _e('If so, which category?', 'random-image-block')?><br />
-    <?php wp_dropdown_categories( array( 'name' => $this->get_field_name("gallery_category"), 'hide_empty' => 0, 'hierarchical' => 1, 'selected' =>  $instance["gallery_category"], 'show_option_none' => 'Select Category' ) ); ?>
-    </label></p></p>
+    <p><label for="<?php echo $this->get_field_id('gallery_category'); ?>"><?php _e('Select a Post Category to display images from, or All Categories to disable filtering', 'random-image-block')?>:<br />
+    <?php wp_dropdown_categories( array( 'name' => $this->get_field_name("gallery_category"), 'hide_empty' => 0, 'hierarchical' => 1, 'selected' =>  $instance["gallery_category"], 'show_option_none' => __('All Categories') ) ); ?>
+    </label></p>
 
     <?php 
   }
