@@ -43,6 +43,11 @@ A: Sure, just add a second or third widget to the sidebar, but you can't do it f
 = Q: I have no picture in my sidebar and im using version 0.3+ =
 A: Make sure you not using a category that dosen't have any pictures.
 
+== Screenshots ==
+
+1. screenshot1.jpg
+2. screenshot2.jpg
+
 == Changelog ==
 
 = Version 0.5 =
