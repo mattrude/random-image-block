@@ -3,7 +3,7 @@
 Plugin Name: Random Image Block
 Plugin URI: http://mattrude.com/projects/random-image-block/
 Description: Display a random image from your native WordPress photo galley or in-beaded images.
-Version: 0.5
+Version: 0.6
 Author: Matt Rude
 Author URI: http://mattrude.com/
 */
@@ -27,10 +27,17 @@ class random_image_widget extends WP_Widget {
     $riw_widget_title = empty($instance['widget_title']) ? '&nbsp;' : apply_filters('widget_title', $instance['widget_title']);
     $riw_cat_single = empty($instance['single_category']) ? 'off' : apply_filters('single_category', $instance['single_category']);
     $riw_cat_slug = empty($instance['gallery_category']) ? 'empty' : apply_filters('gallery_category', $instance['gallery_category']);
+    $riw_center = empty($instance['center']) ? 'off' : apply_filters('center', $instance['center']);
     global $wpdb;
 
     if ($riw_widget_title == "&nbsp;") {
       $riw_widget_title = __('Random Image','random-image-block');
+    }
+
+    if ($riw_center == "on") {
+      $riw_center_output = "align=center";
+    } else {
+      $riw_center_output = "";
     }
 
     $args = array(
@@ -67,14 +74,15 @@ class random_image_widget extends WP_Widget {
           $meta = wp_get_attachment_metadata($imgid);
 
           // construct the image
-            echo "{$before_widget}{$before_title}$riw_widget_title{$after_title}";
-            echo "<div class='random-image'>";
-              echo "<a href=".get_permalink( $imgid )." >";
-              echo "<img width='".$meta['sizes']['thumbnail']['width']."'  height='".$meta['sizes']['thumbnail']['height']."' src='".wp_get_attachment_thumb_url($imgid)."' alt='Random image: ".$attachment->post_title."' />";
-              echo "</a>";
-              echo "<p class='random-image-caption'><strong>$attachment->post_excerpt</strong></p>";
-              echo "<p class='random-image-album'><small>".__('Album:','random-image-block')." <a href=".get_permalink( $albumid ).">".get_the_title($albumid)."</a></small></p>";
-            echo "</div>";
+          echo "{$before_widget}{$before_title}$riw_widget_title{$after_title}";
+          echo "<div class='random-image'>";
+            echo "<p class='random-image-img' $riw_center_output >";
+            echo "<a href=".get_permalink( $imgid )." >";
+            echo "<img width='".$meta['sizes']['thumbnail']['width']."'  height='".$meta['sizes']['thumbnail']['height']."' src='".wp_get_attachment_thumb_url($imgid)."' alt='Random image: ".$attachment->post_title."' />";
+            echo "</a></p>";
+            echo "<p class='random-image-caption'><strong>$attachment->post_excerpt</strong></p>";
+            echo "<p class='random-image-album'><small>".__('Album:','random-image-block')." <a href=".get_permalink( $albumid ).">".get_the_title($albumid)."</a></small></p>";
+          echo "</div>";
           echo $after_widget;
           break;
 	}
@@ -87,14 +95,19 @@ class random_image_widget extends WP_Widget {
     $instance['widget_title'] = strip_tags($new_instance['widget_title']);
     $instance['single_category'] = strip_tags($new_instance['single_category']);
     $instance['gallery_category'] = strip_tags($new_instance['gallery_category']);
+    $instance['center'] = strip_tags($new_instance['center']);
     return $instance;
   }
   
   function form($instance) {
     $riw_widget_title = strip_tags($instance['widget_title']);
+    $riw_center = $instance['center'];
     $riw_cat_single = $instance['single_category'];
     $riw_cat_slug = strip_tags($instance['gallery_category']);
     ?><p><label for="<?php echo $this->get_field_id('widget_title'); ?>"><?php _e('widget title', 'random-image-block')?>:<input class="widefat" id="<?php echo $this->get_field_id('widget_title'); ?>" name="<?php echo $this->get_field_name('widget_title'); ?>" type="text" value="<?php echo attribute_escape($riw_widget_title); ?>" /></label></p>
+
+    <p><input class="checkbox" type="checkbox" <?php if ("$riw_center" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('center'); ?>" name="<?php echo $this->get_field_name('center'); ?>" />
+    <label for="<?php echo $this->get_field_id('center'); ?>"><?php _e('Center the Image', 'random-image-block')?></label></p>
 
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_cat_single" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('single_category'); ?>" name="<?php echo $this->get_field_name('single_category'); ?>" />
     <label for="<?php echo $this->get_field_id('single_category'); ?>"><?php _e('Display from a single Category?', 'random-image-block')?></label></p>
