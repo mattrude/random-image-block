@@ -6,7 +6,7 @@ Donate link: http://mattrude.com/donate/
 Tags: gallery, images, image block, plugin, widget
 Requires at least: 2.9
 Tested up to: 2.9.2
-Stable tag: 0.5
+Stable tag: 0.6
 
 A small plugin that will display a random image from your native WordPress photo galley or in-beaded images.
 
@@ -50,6 +50,8 @@ A: Make sure you not using a category that dosen't have any pictures.
 
 == Changelog ==
 
+= Version 0.6 =
+* Added ability to center image in the wiget area
 = Version 0.5 =
 * Switched to '{$before_widget}{$before_title}'... to try and resolve some display problems
 = Version 0.4 =
