@@ -14,7 +14,7 @@ A small plugin that will display a random image from your native WordPress photo
 
 The Random Image Block is a small plugin that will display a random image from your native WordPress photo galley or in-beaded images.
 
-This widget will display the thumbnail of the random image, the "caption" and the images parent posts name. You may show all pictures on your site, or limit the selection to a single category if you wish.  The Widgets title is also fully configurable. Random Image Widget was designed with full internationalization in mind and can be fully translated (Any help on this would be appreciated).
+This widget will display the thumbnail of the random image, the "caption" and the images parent posts name. You may show all pictures on your site, or limit the selection to a single category if you wish. Once installed on your site, it will fully conform to the current theme. The Widgets title is also fully configurable. Random Image Widget was designed with full internationalization in mind and can be fully translated (Any help on this would be appreciated).
 
 As of Version 0.3 this plugin works out of the box without any configuraion (assuming you have pictures on your site).
 
@@ -26,7 +26,7 @@ This Plugin is fully translated into the following languages:
 * Portuguese
 * Spanish
 
-If you would like to help translating this plugin into your language, or you see a problem with the current translation, please contact me.
+If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me](http://mattrude.com/contact-me/).
 
 == Installation ==
 
@@ -34,18 +34,15 @@ Extract the zip file and copy the folder "random-image-block" into the "wp-conte
 
 == Frequently Asked Questions ==
 
-= Q: May I select more then one category to display? =
-A: At this time, no you may only display a single category per widget.
-
 = Q: May I have more the one image on my sidebar? =
 A: Sure, just add a second or third widget to the sidebar, but you can't do it from within this widget.
 
-= Q: I have no picture in my sidebar and im using version 0.3+ =
-A: Make sure you not using a category that dosen't have any pictures.
+= Q: I have no picture in my sidebar, the widget doesn't work!  =
+A: Make sure the category you have selected has pictures in it, if it doesn't, nothing will be displayed.
 
 == Screenshots ==
 
-1. The Random Image Block on the front page.
+1. The Random Image Block on the front page, conforming to the current theme.
 2. The Wiget Admin page for the Random Image Block
 
 == Changelog ==
