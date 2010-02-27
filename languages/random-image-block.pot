@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Random Image Block 0.7\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/random-image-block\n"
-"POT-Creation-Date: 2010-02-24 04:05+0000\n"
+"POT-Creation-Date: 2010-02-27 18:34+0000\n"
 "PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,28 +24,30 @@ msgstr ""
 msgid "Displays a random gallery image."
 msgstr ""
 
-#: random-image-block.php:34
+#: random-image-block.php:33
 msgid "Random Image"
 msgstr ""
 
-#: random-image-block.php:83
+#: random-image-block.php:78
 msgid "Album:"
 msgstr ""
 
-#: random-image-block.php:106
+#: random-image-block.php:99
 msgid "Widget Title"
 msgstr ""
 
-#: random-image-block.php:109
+#: random-image-block.php:102
 msgid "Center the Image?"
 msgstr ""
 
-#: random-image-block.php:112
-msgid "Display from a single Category?"
+#: random-image-block.php:104
+msgid ""
+"Select a Post Category to display images from, or All Categories to disable "
+"filtering"
 msgstr ""
 
-#: random-image-block.php:113
-msgid "If so, which category?"
+#: random-image-block.php:105
+msgid "All Categories"
 msgstr ""
 
 #. Plugin Name of an extension
