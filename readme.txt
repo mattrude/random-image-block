@@ -29,7 +29,7 @@ If you would like to help translating this plugin, or you see a problem with the
 
 == Installation ==
 
-Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation and then activate the plugin from Plugins -> Installed page.
+Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation and then activate the plugin from your Dashboard by going to Plugins -> Installed page.
 
 == Frequently Asked Questions ==
 
