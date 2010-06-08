@@ -2,10 +2,9 @@
 Contributors: mattrude
 Author URI: http://mattrude.com/
 Plugin URI: http://mattrude.com/projects/random-image-block/
-Donate link: http://mattrude.com/donate/
 Tags: gallery, images, image block, plugin, widget
 Requires at least: 2.9
-Tested up to: 2.9.2
+Tested up to: 3.0
 Stable tag: 0.7
 
 A small plugin that will display a random image from your native WordPress photo galley or in-beaded images.
@@ -36,6 +35,9 @@ Extract the zip file and copy the folder "random-image-block" into the "wp-conte
 
 = Q: May I have more the one image on my sidebar? =
 A: Sure, just add a second or third widget to the sidebar, but you can't do it from within this widget.
+
+= Q: May I display more then one category at once? =
+A: No, you may only display a single category per widget
 
 = Q: I have no picture in my sidebar, the widget doesn't work!  =
 A: Make sure the category you have selected has pictures in it, if it doesn't, nothing will be displayed.
