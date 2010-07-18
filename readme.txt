@@ -27,6 +27,12 @@ This Plugin is fully translated into the following languages:
 
 If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me](http://mattrude.com/contact-me/).
 
+== Other Notes ==
+Wanted Features
+* Allow random image to link to the post page and not the attachmented image.
+* Add 'Advanced Options'
+* Allow to run the whole thing via a function.
+
 == Installation ==
 
 Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation and then activate the plugin from your Dashboard by going to Plugins -> Installed page.
