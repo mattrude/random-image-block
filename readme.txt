@@ -48,6 +48,9 @@ A: No, you may only display a single category per widget
 = Q: I have no picture in my sidebar, the widget doesn't work!  =
 A: Make sure the category you have selected has pictures in it, if it doesn't, nothing will be displayed.
 
+= Q: Will this plugin work with WP Super Cache enabled? =
+A: Unfortunately, no. WP Super Cache caches all php built html pages for quicker page loads. Since the Random Image Block is built directly into the html page, with WP Super Cache enabled, you will see the same random image on the same page until the cache refreshes. Each page will still have a diffrent image, but they will not update.  Currently there is no work around.
+
 == Screenshots ==
 
 1. The Random Image Block on the front page, conforming to the current theme.
