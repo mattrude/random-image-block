@@ -27,9 +27,15 @@ This Plugin is fully translated into the following languages:
 
 If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me](http://mattrude.com/contact-me/).
 
+== Other Notes ==
+Wanted Features
+* Allow random image to link to the post page and not the attachmented image.
+* Add 'Advanced Options'
+* Allow to run the whole thing via a function.
+
 == Installation ==
 
-Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation and then activate the plugin from Plugins -> Installed page.
+Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation and then activate the plugin from your Dashboard by going to Plugins -> Installed page.
 
 == Frequently Asked Questions ==
 
@@ -41,6 +47,9 @@ A: No, you may only display a single category per widget
 
 = Q: I have no picture in my sidebar, the widget doesn't work!  =
 A: Make sure the category you have selected has pictures in it, if it doesn't, nothing will be displayed.
+
+= Q: Will this plugin work with WP Super Cache enabled? =
+A: Unfortunately, no. WP Super Cache caches all php built html pages for quicker page loads. Since the Random Image Block is built directly into the html page, with WP Super Cache enabled, you will see the same random image on the same page until the cache refreshes. Each page will still have a diffrent image, but they will not update.  Currently there is no work around.
 
 == Screenshots ==
 
