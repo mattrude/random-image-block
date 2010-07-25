@@ -27,7 +27,6 @@ This Plugin is fully translated into the following languages:
 
 If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me](http://mattrude.com/contact-me/).
 
-== Other Notes ==
 = Wanted Features =
 * Allow random image to link to the post page and not the attachmented image.
 * Add 'Advanced Options'
