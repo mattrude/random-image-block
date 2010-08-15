@@ -34,8 +34,20 @@ If you would like to help translating this plugin, or you see a problem with the
 * Add 'Advanced Options'
 
 == Installation ==
+As with most WordPress plugins, there is two ways of installing this plugin.
 
-Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation and then activate the plugin from your Dashboard by going to Plugins -> Installed page.
+= Primary Option =
+
+1. Go to your WordPress Dashboard and login as an Admin
+1. From your Dashboard go to `Plugins` section on the left hand side and select `Add New`.
+1. Search for `Random Image Block`
+1. Click the `Install Now` link and follow the instructions.
+
+= Backup Option =
+
+1. Download the latest version from the download page (http://wordpress.org/extend/plugins/random-image-block/)
+1. Extract the zip file and copy the folder "random-image-block" into the "wp-content/plugins/" directory in your WordPress installation.
+1. Activate the plugin from your Dashboard by going to Plugins -> Installed page.
 
 == Frequently Asked Questions ==
 
@@ -49,7 +61,7 @@ A: No, you may only display a single category per widget
 A: Make sure the category you have selected has pictures in it, if it doesn't, nothing will be displayed.
 
 = Q: Will this plugin work with WP Super Cache enabled? =
-A: Unfortunately, no. WP Super Cache caches all php built html pages for quicker page loads. Since the Random Image Block is built directly into the html page, with WP Super Cache enabled, you will see the same random image on the same page until the cache refreshes. Each page will still have a diffrent image, but they will not update.  Currently there is no work around.
+A: Unfortunately, no. [WP Super Cache](http://wordpress.org/extend/plugins/wp-super-cache/) caches all php built html pages for quicker page loads. Since the Random Image Block is built directly into the html page, with WP Super Cache enabled, you will see the same random image on the same page until the cache refreshes. Each page will still have a diffrent image, but they will not update.  Currently there is no work around.
 
 == Screenshots ==
 
