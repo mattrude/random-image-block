@@ -15,7 +15,7 @@ The Random Image Block is a small plugin that will display a random image from y
 
 This widget will display the thumbnail of the random image, the "caption" and the images parent posts name. You may show all pictures on your site, or limit the selection to a single category if you wish. Once installed on your site, it will fully conform to the current theme. The Widgets title is also fully configurable. Random Image Widget was designed with full internationalization in mind and can be fully translated (Any help on this would be appreciated). As of Version 0.3 this plugin works out of the box without any configuraion (assuming you have pictures on your site).
 
-Version 0.7 works with WordPress 3.0 in both single and multi site modes.  As a site admin, you may activate this plugin across all the sites on your install.
+Version 0.7 works with WordPress 3.0+ in both single and multi site modes.  As a Site Admin, you may activate this plugin across all the sites on your install.
 
 This Plugin is fully translated into the following languages:
 
@@ -28,9 +28,10 @@ This Plugin is fully translated into the following languages:
 If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me](http://mattrude.com/contact-me/).
 
 = Wanted Features =
+
 * Allow random image to link to the post page and not the attachmented image.
+* Allow to run the whole thing via a function and/or shortcode.
 * Add 'Advanced Options'
-* Allow to run the whole thing via a function.
 
 == Installation ==
 
