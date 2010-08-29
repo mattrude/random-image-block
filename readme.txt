@@ -29,7 +29,6 @@ If you would like to help translating this plugin, or you see a problem with the
 
 = Wanted Features =
 
-* Allow random image to link to the post page and not the attachmented image.
 * Allow to run the whole thing via a function and/or shortcode.
 * Add 'Advanced Options'
 
@@ -70,6 +69,8 @@ A: Unfortunately, no. [WP Super Cache](http://wordpress.org/extend/plugins/wp-su
 
 == Changelog ==
 
+= Version 0.8 =
+* Added ability to link to the album vs the image.
 = Version 0.7 =
 * Changed to dropdown box for category selection, translaion files have not been fully updated, yet.
 = Version 0.6 =
