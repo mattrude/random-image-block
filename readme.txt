@@ -5,7 +5,7 @@ Plugin URI: http://mattrude.com/projects/random-image-block/
 Tags: gallery, images, image block, plugin, widget
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 0.7
+Stable tag: 0.8
 
 A small plugin that will display a random image from your native WordPress photo galley or in-beaded images.
 
