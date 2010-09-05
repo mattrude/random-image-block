@@ -6,20 +6,23 @@ Description: Display a random image from your native WordPress photo galley or i
 Version: 0.8
 Author: Matt Rude
 Author URI: http://mattrude.com/
+License: GPLv2
 */
 
 /*
-GNU GENERAL PUBLIC LICENSE
-Version 2, June 1991
+This program is free software; you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation; version 2 of the License.
 
-Copyright (C) 1989, 1991 Free Software Foundation, Inc.
-51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+GNU General Public License for more details. 
 
-Everyone is permitted to copy and distribute verbatim copies
-of this license document, but changing it is not allowed.
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software 
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA 
 */
-
-
 
 class random_image_widget extends WP_Widget {
   function random_image_widget() {
