@@ -29,6 +29,7 @@ If you would like to help translating this plugin, or you see a problem with the
 
 = Wanted Features =
 
+* Allow to select what items to display in widget.
 * Allow to run the whole thing via a function and/or shortcode.
 
 == Installation ==
