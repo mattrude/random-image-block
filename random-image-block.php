@@ -3,26 +3,11 @@
 Plugin Name: Random Image Block
 Plugin URI: http://mattrude.com/projects/random-image-block/
 Description: Display a random image from your native WordPress photo galley or in-beaded images.
-Version: 0.8
+Version: 0.9
 Author: Matt Rude
 Author URI: http://mattrude.com/
-License: GPLv2
 */
 
-/*
-This program is free software; you can redistribute it and/or modify 
-it under the terms of the GNU General Public License as published by 
-the Free Software Foundation; version 2 of the License.
-
-This program is distributed in the hope that it will be useful, 
-but WITHOUT ANY WARRANTY; without even the implied warranty of 
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
-GNU General Public License for more details. 
-
-You should have received a copy of the GNU General Public License 
-along with this program; if not, write to the Free Software 
-Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA 
-*/
 
 class random_image_widget extends WP_Widget {
   function random_image_widget() {
@@ -43,6 +28,10 @@ class random_image_widget extends WP_Widget {
     $riw_center = empty($instance['center']) ? 'off' : apply_filters('center', $instance['center']);
     $riw_cat_id = empty($instance['gallery_category']) ? '&nbsp;' : apply_filters('gallery_category', $instance['gallery_category']);
     $riw_link_album = empty($instance['link_album']) ? 'off' : apply_filters('link_album', $instance['link_album']);
+    $riw_display_album = empty($instance['display_album']) ? 'on' : apply_filters('display_album', $instance['display_album']);
+    $riw_display_title = empty($instance['display_title']) ? 'off' : apply_filters('display_title', $instance['display_title']);
+    $riw_display_caption = empty($instance['display_caption']) ? 'on' : apply_filters('display_caption', $instance['display_caption']);
+    $riw_display_description = empty($instance['display_description']) ? 'off' : apply_filters('display_description', $instance['display_description']);
     global $wpdb;
 
     if ($riw_widget_title == "&nbsp;") {
@@ -70,7 +59,6 @@ class random_image_widget extends WP_Widget {
       foreach ($attachments as $attachment) {
         if ( $riw_cat_id !== "-1" ) {
           $albumid = $attachment->post_parent;
-          //echo "on";
         } else {
           $albumid = $attachment->post_parent;
 	  foreach((get_the_category($albumid)) as $category) { 
@@ -92,12 +80,14 @@ class random_image_widget extends WP_Widget {
           // construct the image
           echo "{$before_widget}{$before_title}$riw_widget_title{$after_title}";
           echo "<div class='random-image'>";
+            if ( $riw_display_title == "on" ) { echo "<p class='random-image-title'><strong>$attachment->post_title</strong></p>"; }
             echo "<p class='random-image-img' $riw_center_output >";
-            echo "<a href=".get_permalink( $riw_image_link )." >";
-            echo "<img width='".$meta['sizes']['thumbnail']['width']."'  height='".$meta['sizes']['thumbnail']['height']."' src='".wp_get_attachment_thumb_url($imgid)."' alt='Random image: ".$attachment->post_title."' />";
+            echo "<a href=".get_permalink( $riw_image_link )."  >";
+            echo "<img width='".$meta['sizes']['thumbnail']['width']."' height='".$meta['sizes']['thumbnail']['height']."' src='".wp_get_attachment_thumb_url($imgid)."' alt='Random image: ".$attachment->post_title."' />";
             echo "</a></p>";
-            echo "<p class='random-image-caption'><strong>$attachment->post_excerpt</strong></p>";
-            echo "<p class='random-image-album'><small>".__('Album:','random-image-block')." <a href=".get_permalink( $albumid ).">".get_the_title($albumid)."</a></small></p>";
+            if ( $riw_display_caption == "on" ) { echo "<p class='random-image-caption'><i>$attachment->post_excerpt</i></p>"; }
+            if ( $riw_display_description == "on" ) { echo "<p class='random-image-description'>$attachment->post_content</p>"; }
+            if ( $riw_display_album == "on" ) { echo "<p class='random-image-album'><small>".__('Album:','random-image-block')." <a href=".get_permalink( $albumid ).">".get_the_title($albumid)."</a></small></p>"; }
           echo "</div>";
           echo $after_widget;
           break;
@@ -112,6 +102,10 @@ class random_image_widget extends WP_Widget {
     $instance['gallery_category'] = strip_tags($new_instance['gallery_category']);
     $instance['center'] = strip_tags($new_instance['center']);
     $instance['link_album'] = strip_tags($new_instance['link_album']);
+    $instance['display_album'] = strip_tags($new_instance['display_album']);
+    $instance['display_title'] = strip_tags($new_instance['display_title']);
+    $instance['display_caption'] = strip_tags($new_instance['display_caption']);
+    $instance['display_description'] = strip_tags($new_instance['display_description']);
     return $instance;
   }
   
@@ -120,17 +114,33 @@ class random_image_widget extends WP_Widget {
     $riw_center = $instance['center'];
     $riw_link_album = $instance['link_album'];
     $riw_cat_id = strip_tags($instance['gallery_category']);
+    $riw_display_album = empty($instance['display_album']) ? 'on' : apply_filters('display_album', $instance['display_album']);
+    $riw_display_title = $instance['display_title'];
+    $riw_display_caption = empty($instance['display_caption']) ? 'on' : apply_filters('display_caption', $instance['display_caption']);
+    $riw_display_description = $instance['display_description'];
     ?><p><label for="<?php echo $this->get_field_id('widget_title'); ?>"><?php _e('Widget Title', 'random-image-block')?>:<input class="widefat" id="<?php echo $this->get_field_id('widget_title'); ?>" name="<?php echo $this->get_field_name('widget_title'); ?>" type="text" value="<?php echo attribute_escape($riw_widget_title); ?>" /></label></p>
 
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_center" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('center'); ?>" name="<?php echo $this->get_field_name('center'); ?>" />
     <label for="<?php echo $this->get_field_id('center'); ?>"><?php _e('Center the Image?', 'random-image-block')?></label></p>
 
-    <p><input class="checkbox" type="checkbox" <?php if ("$riw_link_album" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('link_album'); ?>" name="<?php echo $this->get_field_name('link_album'); ?>" />
-    <label for="<?php echo $this->get_field_id('link_album'); ?>"><?php _e('Link to the Album vs Image?', 'random-image-block')?></label></p>
-
     <p><label for="<?php echo $this->get_field_id('gallery_category'); ?>"><?php _e('Select a Post Category to display images from, or All Categories to disable filtering', 'random-image-block')?>:<br />
     <?php wp_dropdown_categories( array( 'name' => $this->get_field_name("gallery_category"), 'hide_empty' => 0, 'hierarchical' => 1, 'selected' =>  $instance["gallery_category"], 'show_option_none' => __('All Categories') ) ); ?>
     </label></p>
+
+    <p><input class="checkbox" type="checkbox" <?php if ("$riw_link_album" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('link_album'); ?>" name="<?php echo $this->get_field_name('link_album'); ?>" />
+    <label for="<?php echo $this->get_field_id('link_album'); ?>"><?php _e('Link to the Album vs Image?', 'random-image-block')?></label></p>
+
+    <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_album" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_album'); ?>" name="<?php echo $this->get_field_name('display_album'); ?>" />
+    <label for="<?php echo $this->get_field_id('display_album'); ?>"><?php _e('Display name of Album?', 'random-image-block')?></label></p>
+
+    <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_title" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_title'); ?>" name="<?php echo $this->get_field_name('display_title'); ?>" />
+    <label for="<?php echo $this->get_field_id('display_title'); ?>"><?php _e('Display the Images Title?', 'random-image-block')?></label></p>
+
+    <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_caption" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_caption'); ?>" name="<?php echo $this->get_field_name('display_caption'); ?>" />
+    <label for="<?php echo $this->get_field_id('display_caption'); ?>"><?php _e('Display the Images Caption?', 'random-image-block')?></label></p>
+
+    <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_description" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_description'); ?>" name="<?php echo $this->get_field_name('display_description'); ?>" />
+    <label for="<?php echo $this->get_field_id('display_description'); ?>"><?php _e('Display the Images Description?', 'random-image-block')?></label></p>
 
     <?php 
   }
