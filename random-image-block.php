@@ -14,9 +14,7 @@ class random_image_widget extends WP_Widget {
     $currentLocale = get_locale();
     if(!empty($currentLocale)) {
       $moFile = dirname(__FILE__) . "/languages/random-image-block." .  $currentLocale . ".mo";
-//	echo $moFile;
-load_textdomain('random-image-block', '/var/www/therudes.com/wp-content/plugins/random-image-block/languages/random-image-block.fr_FR.mo');
-//      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('random-image-block', $moFile);
+      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('random-image-block', $moFile);
     }
 
     $random_image_widget_name = __('Random Image Widget', 'random-image-block');
