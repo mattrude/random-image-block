@@ -13,9 +13,12 @@ class random_image_widget extends WP_Widget {
   function random_image_widget() {
     $currentLocale = get_locale();
     if(!empty($currentLocale)) {
-      $moFile = dirname(__FILE__) . "/languages/random_image_widget_" .  $currentLocale . ".mo";
-      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('random-image-block', $moFile);
+      $moFile = dirname(__FILE__) . "/languages/random-image-block." .  $currentLocale . ".mo";
+//	echo $moFile;
+load_textdomain('random-image-block', '/var/www/therudes.com/wp-content/plugins/random-image-block/languages/random-image-block.fr_FR.mo');
+//      if(@file_exists($moFile) && is_readable($moFile)) load_textdomain('random-image-block', $moFile);
     }
+
     $random_image_widget_name = __('Random Image Widget', 'random-image-block');
     $random_image_widget_description = __('Displays a random gallery image.', 'random-image-block');
     $widget_ops = array('classname' => 'random_image_widget', 'description' => $random_image_widget_description );
@@ -49,7 +52,6 @@ class random_image_widget extends WP_Widget {
        'post_mime_type' => 'image',
        'numberposts' => -1,
        'post_status' => null,
-       'post_parent' => $post->ID,
        'orderby' => 'rand'
     );
 
@@ -101,6 +103,7 @@ class random_image_widget extends WP_Widget {
     $instance['widget_title'] = strip_tags($new_instance['widget_title']);
     $instance['gallery_category'] = strip_tags($new_instance['gallery_category']);
     $instance['center'] = strip_tags($new_instance['center']);
+    $instance['show_advanced'] = strip_tags($new_instance['show_advanced']);
     $instance['link_album'] = strip_tags($new_instance['link_album']);
     $instance['display_album'] = strip_tags($new_instance['display_album']);
     $instance['display_title'] = strip_tags($new_instance['display_title']);
@@ -112,6 +115,7 @@ class random_image_widget extends WP_Widget {
   function form($instance) {
     $riw_widget_title = strip_tags($instance['widget_title']);
     $riw_center = $instance['center'];
+    $riw_show_advanced = empty($instance['show_advanced']) ? 'off' : apply_filters('show_advanced', $instance['show_advanced']);
     $riw_link_album = $instance['link_album'];
     $riw_cat_id = strip_tags($instance['gallery_category']);
     $riw_display_album = empty($instance['display_album']) ? 'on' : apply_filters('display_album', $instance['display_album']);
@@ -127,21 +131,43 @@ class random_image_widget extends WP_Widget {
     <?php wp_dropdown_categories( array( 'name' => $this->get_field_name("gallery_category"), 'hide_empty' => 0, 'hierarchical' => 1, 'selected' =>  $instance["gallery_category"], 'show_option_none' => __('All Categories') ) ); ?>
     </label></p>
 
-    <p><input class="checkbox" type="checkbox" <?php if ("$riw_link_album" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('link_album'); ?>" name="<?php echo $this->get_field_name('link_album'); ?>" />
+    <p><input class="checkbox" type="checkbox" <?php if ("$riw_show_advanced" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('show_advanced'); ?>" name="<?php echo $this->get_field_name('show_advanced'); ?>" />
+    <label for="<?php echo $this->get_field_id('show_advanced'); ?>"><?php _e('Show Advanced Options', 'random-image-block')?></label></p>
+
+    <?php if ( $riw_show_advanced == "on" ) {
+      ?><div style='border-width: 1px;
+border-color: #DFDFDF;
+border-bottom-left-radius: 6px 6px;
+border-bottom-right-radius: 6px 6px;
+border-style: solid;
+border-width: 1px;
+border-top-left-radius: 6px 6px;
+border-top-right-radius: 6px 6px;
+padding: 0 10px;
+line-height: 10px;
+'><br /><?php
+    } else {
+      ?><div style="display: none; " id="riw-advanced-options" ><?php
+    } ?>
+
+    <p><strong><?php _e('Album Options:', 'random-image-block') ?></strong></p>
+    <p style="line-height: 6px;"><input class="checkbox" type="checkbox" <?php if ("$riw_link_album" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('link_album'); ?>" name="<?php echo $this->get_field_name('link_album'); ?>" />
     <label for="<?php echo $this->get_field_id('link_album'); ?>"><?php _e('Link to the Album vs Image?', 'random-image-block')?></label></p>
 
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_album" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_album'); ?>" name="<?php echo $this->get_field_name('display_album'); ?>" />
     <label for="<?php echo $this->get_field_id('display_album'); ?>"><?php _e('Display name of Album?', 'random-image-block')?></label></p>
 
+    <p><strong><?php _e('Meta Data to Display:', 'random-image-block') ?></strong></p>
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_title" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_title'); ?>" name="<?php echo $this->get_field_name('display_title'); ?>" />
-    <label for="<?php echo $this->get_field_id('display_title'); ?>"><?php _e('Display the Images Title?', 'random-image-block')?></label></p>
+    <label for="<?php echo $this->get_field_id('display_title'); ?>"><?php _e('Show the Images Title?', 'random-image-block')?></label></p>
 
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_caption" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_caption'); ?>" name="<?php echo $this->get_field_name('display_caption'); ?>" />
-    <label for="<?php echo $this->get_field_id('display_caption'); ?>"><?php _e('Display the Images Caption?', 'random-image-block')?></label></p>
+    <label for="<?php echo $this->get_field_id('display_caption'); ?>"><?php _e('Show the Images Caption?', 'random-image-block')?></label</p>
 
     <p><input class="checkbox" type="checkbox" <?php if ("$riw_display_description" == "on" ){echo 'checked="checked"';} ?> id="<?php echo $this->get_field_id('display_description'); ?>" name="<?php echo $this->get_field_name('display_description'); ?>" />
-    <label for="<?php echo $this->get_field_id('display_description'); ?>"><?php _e('Display the Images Description?', 'random-image-block')?></label></p>
+    <label for="<?php echo $this->get_field_id('display_description'); ?>"><?php _e('Show Images Description?', 'random-image-block')?></label></p>
 
+    </div>
     <?php 
   }
 }
