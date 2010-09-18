@@ -1,73 +1,83 @@
-# Translation of the WordPress plugin Random Image Block 0.7 by Matt Rude.
-# Copyright (C) 2010 Matt Rude
-# This file is distributed under the same license as the Random Image Block package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Random Image Block 0.7\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/random-image-block\n"
-"POT-Creation-Date: 2010-02-27 18:34+0000\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: safecss 1.o\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-18 15:18-0500\n"
+"PO-Revision-Date: 2010-09-18 14:57-0500\n"
+"Last-Translator: Matt Rude <matt@mattrude.com>\n"
+"Language-Team: Matt Rude <matt@mattrude.com>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: random-image-block.php:19
+#: random-image-block.php:22
 msgid "Random Image Widget"
 msgstr ""
 
-#: random-image-block.php:20
+#: random-image-block.php:23
 msgid "Displays a random gallery image."
 msgstr ""
 
-#: random-image-block.php:33
+#: random-image-block.php:41
 msgid "Random Image"
 msgstr ""
 
-#: random-image-block.php:78
+#: random-image-block.php:92
 msgid "Album:"
 msgstr ""
 
-#: random-image-block.php:99
+#: random-image-block.php:125
 msgid "Widget Title"
 msgstr ""
 
-#: random-image-block.php:102
+#: random-image-block.php:128
 msgid "Center the Image?"
 msgstr ""
 
-#: random-image-block.php:104
+#: random-image-block.php:130
 msgid ""
 "Select a Post Category to display images from, or All Categories to disable "
 "filtering"
 msgstr ""
 
-#: random-image-block.php:105
+#: random-image-block.php:131
 msgid "All Categories"
 msgstr ""
 
-#. Plugin Name of an extension
-msgid "Random Image Block"
+#: random-image-block.php:135
+msgid "Show Advanced Options"
 msgstr ""
 
-#. Plugin URI of an extension
-msgid "http://mattrude.com/projects/random-image-block/"
+#: random-image-block.php:153
+msgid "Album Options:"
 msgstr ""
 
-#. Description of an extension
-msgid ""
-"Display a random image from your native WordPress photo galley or in-beaded "
-"images."
+#: random-image-block.php:155
+msgid "Link to the Album vs Image?"
 msgstr ""
 
-#. Author of an extension
-msgid "Matt Rude"
+#: random-image-block.php:158
+msgid "Display name of Album?"
 msgstr ""
 
-#. Author URI of an extension
-msgid "http://mattrude.com/"
+#: random-image-block.php:160
+msgid "Meta Data to Display:"
+msgstr ""
+
+#: random-image-block.php:162
+msgid "Show the Images Title?"
+msgstr ""
+
+#: random-image-block.php:165
+msgid "Show the Images Caption?"
+msgstr ""
+
+#: random-image-block.php:168
+msgid "Show Images Description?"
 msgstr ""
