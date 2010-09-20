@@ -25,12 +25,13 @@ This Plugin is fully translated into the following languages:
 * Danish
 * Dutch
 * German
+* Indonesian
 * Italian
 * Portuguese
 * Russian
 * Spanish
 
-If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me](http://mattrude.com/contact-me/).
+If you would like to help translating this plugin, or you see a problem with the current translation, please see my [Translation](http://translate.mattrude.com/projects/random-image-block) page, and/or [contact me](http://mattrude.com/contact-me/).
 
 = Wanted Features =
 
@@ -77,7 +78,7 @@ A: Unfortunately, no. [WP Super Cache](http://wordpress.org/extend/plugins/wp-su
 = Version 0.9 =
 * Added Advanced Options
 * Allow for custom Meta data
-* Added Tranlation for: Czech, Danish, Dutch, Finnish, & Russian
+* Added Tranlation for: Czech, Danish, Dutch, Finnish, Indonesian, & Russian
 = Version 0.8 =
 * Added ability to link to the album vs the image.
 = Version 0.7 =
