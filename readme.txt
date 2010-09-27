@@ -19,6 +19,7 @@ The Random Image Block plugin works with WordPress 3.0+ in both single and multi
 
 This Plugin is fully translated into the following languages:
 
+* Arabic
 * Czech
 * Finnish
 * French
@@ -78,7 +79,7 @@ A: Unfortunately, no. [WP Super Cache](http://wordpress.org/extend/plugins/wp-su
 = Version 0.9 =
 * Added Advanced Options
 * Allow for custom Meta data
-* Added Tranlation for: Czech, Danish, Dutch, Finnish, Indonesian, & Russian
+* Added Tranlation for: Arabic, Czech, Danish, Dutch, Finnish, Indonesian, & Russian
 = Version 0.8 =
 * Added ability to link to the album vs the image.
 = Version 0.7 =
