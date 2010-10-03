@@ -3,7 +3,7 @@
 Plugin Name: Random Image Block
 Plugin URI: http://mattrude.com/projects/random-image-block/
 Description: Display a random image from your native WordPress photo galley or in-beaded images.
-Version: 0.9
+Version: 0.9.1
 Author: Matt Rude
 Author URI: http://mattrude.com/
 */
@@ -100,17 +100,19 @@ class random_image_widget extends WP_Widget {
     $instance = $old_instance;
     $instance['widget_title'] = strip_tags($new_instance['widget_title']);
     $instance['gallery_category'] = strip_tags($new_instance['gallery_category']);
-    $instance['center'] = strip_tags($new_instance['center']);
-    $instance['show_advanced'] = strip_tags($new_instance['show_advanced']);
-    $instance['link_album'] = strip_tags($new_instance['link_album']);
-    $instance['display_album'] = strip_tags($new_instance['display_album']);
-    $instance['display_title'] = strip_tags($new_instance['display_title']);
-    $instance['display_caption'] = strip_tags($new_instance['display_caption']);
-    $instance['display_description'] = strip_tags($new_instance['display_description']);
+    $instance['center'] = strip_tags(empty($new_instance['center']) ? 'off' : apply_filters('center', $new_instance['center']));
+    $instance['show_advanced'] = strip_tags(empty($new_instance['show_advanced']) ? 'off' : apply_filters('show_advanced', $new_instance['show_advanced']));
+    $instance['link_album'] = strip_tags(empty($new_instance['link_album']) ? 'off' : apply_filters('link_album', $new_instance['link_album']));
+    $instance['display_album'] = strip_tags(empty($new_instance['display_album']) ? 'off' : apply_filters('display_album', $new_instance['display_album']));
+    $instance['display_title'] = strip_tags(empty($new_instance['display_title']) ? 'off' : apply_filters('display_title', $new_instance['display_title']));
+    $instance['display_caption'] = strip_tags(empty($new_instance['display_caption']) ? 'off' : apply_filters('display_caption', $new_instance['display_caption']));
+    $instance['display_description'] = strip_tags(empty($new_instance['display_description']) ? 'off' : apply_filters('display_description', $new_instance['display_description']));
     return $instance;
   }
   
   function form($instance) {
+
+    echo $instance['display_album'];
     $riw_widget_title = strip_tags($instance['widget_title']);
     $riw_center = $instance['center'];
     $riw_show_advanced = empty($instance['show_advanced']) ? 'off' : apply_filters('show_advanced', $instance['show_advanced']);
