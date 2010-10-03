@@ -34,11 +34,6 @@ This Plugin is fully translated into the following languages:
 
 If you would like to help translating this plugin, or you see a problem with the current translation, please see my [Translation](http://translate.mattrude.com/projects/random-image-block) page, and/or [contact me](http://mattrude.com/contact-me/).
 
-= Wanted Features =
-
-* Allow to select what items to display in widget.
-* Allow to run the whole thing via a function and/or shortcode.
-
 == Installation ==
 As with most WordPress plugins, there is two ways of installing this plugin.
 
