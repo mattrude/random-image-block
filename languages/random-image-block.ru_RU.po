@@ -18,66 +18,67 @@ msgstr ""
 
 #: random-image-block.php:22
 msgid "Random Image Widget"
-msgstr ""
+msgstr "Random Image Виджет"
 
 #: random-image-block.php:23
 msgid "Displays a random gallery image."
-msgstr ""
+msgstr "Отображает случайных изображений галереи."
 
 #: random-image-block.php:41
 msgid "Random Image"
-msgstr ""
+msgstr "Random Image"
 
 #: random-image-block.php:92
 msgid "Album:"
-msgstr ""
+msgstr "Альбом:"
 
 #: random-image-block.php:125
 msgid "Widget Title"
-msgstr ""
+msgstr "Виджет Название"
 
 #: random-image-block.php:128
 msgid "Center the Image?"
-msgstr ""
+msgstr "Центр Image?"
 
 #: random-image-block.php:130
 msgid ""
 "Select a Post Category to display images from, or All Categories to disable "
 "filtering"
-msgstr ""
+msgstr "Выберите должность Категория для просмотра изображений с, или Все категории для отключения фильтрации"
 
 #: random-image-block.php:131
 msgid "All Categories"
-msgstr ""
+msgstr "Все категории"
 
 #: random-image-block.php:135
 msgid "Show Advanced Options"
-msgstr ""
+msgstr "Показать дополнительные опции"
 
 #: random-image-block.php:153
 msgid "Album Options:"
-msgstr ""
+msgstr "Альбом Опции:"
 
 #: random-image-block.php:155
 msgid "Link to the Album vs Image?"
-msgstr ""
+msgstr "Ссылка на изображение Альбом против?"
 
 #: random-image-block.php:158
 msgid "Display name of Album?"
-msgstr ""
+msgstr "Показать название альбома?"
 
 #: random-image-block.php:160
 msgid "Meta Data to Display:"
-msgstr ""
+msgstr "Мета данные для отображения:"
 
 #: random-image-block.php:162
 msgid "Show the Images Title?"
-msgstr ""
+msgstr "Показать Изображения Title?"
 
 #: random-image-block.php:165
 msgid "Show the Images Caption?"
-msgstr ""
+msgstr "Показать Изображения Caption?"
 
 #: random-image-block.php:168
 msgid "Show Images Description?"
-msgstr ""
+msgstr "Показать Изображения Описание?"
+

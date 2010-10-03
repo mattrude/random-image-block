@@ -18,66 +18,67 @@ msgstr ""
 
 #: random-image-block.php:22
 msgid "Random Image Widget"
-msgstr ""
+msgstr "Náhodný obrázek Widget"
 
 #: random-image-block.php:23
 msgid "Displays a random gallery image."
-msgstr ""
+msgstr "Zobrazí náhodný galerie image."
 
 #: random-image-block.php:41
 msgid "Random Image"
-msgstr ""
+msgstr "Náhodný obrázek"
 
 #: random-image-block.php:92
 msgid "Album:"
-msgstr ""
+msgstr "Album:"
 
 #: random-image-block.php:125
 msgid "Widget Title"
-msgstr ""
+msgstr "Widget hlavy"
 
 #: random-image-block.php:128
 msgid "Center the Image?"
-msgstr ""
+msgstr "Centrum obrázku?"
 
 #: random-image-block.php:130
 msgid ""
 "Select a Post Category to display images from, or All Categories to disable "
 "filtering"
-msgstr ""
+msgstr "Vyberte post Kategorie zobrazit obrázky ze, nebo Všechny kategorie vypnout filtrování"
 
 #: random-image-block.php:131
 msgid "All Categories"
-msgstr ""
+msgstr "Všechny kategorie"
 
 #: random-image-block.php:135
 msgid "Show Advanced Options"
-msgstr ""
+msgstr "Garance nejnižší ceny"
 
 #: random-image-block.php:153
 msgid "Album Options:"
-msgstr ""
+msgstr "Album Možnosti:"
 
 #: random-image-block.php:155
 msgid "Link to the Album vs Image?"
-msgstr ""
+msgstr "Odkaz na obrázek alba vs?"
 
 #: random-image-block.php:158
 msgid "Display name of Album?"
-msgstr ""
+msgstr "Zobrazovaný název alba?"
 
 #: random-image-block.php:160
 msgid "Meta Data to Display:"
-msgstr ""
+msgstr "Meta Data k zobrazení:"
 
 #: random-image-block.php:162
 msgid "Show the Images Title?"
-msgstr ""
+msgstr "Zobrazit obrázky titul?"
 
 #: random-image-block.php:165
 msgid "Show the Images Caption?"
-msgstr ""
+msgstr "Zobrazit obrázky Caption?"
 
 #: random-image-block.php:168
 msgid "Show Images Description?"
-msgstr ""
+msgstr "Zobrazit obrázky popis?"
+

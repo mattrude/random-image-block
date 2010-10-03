@@ -18,66 +18,67 @@ msgstr ""
 
 #: random-image-block.php:22
 msgid "Random Image Widget"
-msgstr ""
+msgstr "Random Image Widget"
 
 #: random-image-block.php:23
 msgid "Displays a random gallery image."
-msgstr ""
+msgstr "Näyttää satunnainen galleria kuva."
 
 #: random-image-block.php:41
 msgid "Random Image"
-msgstr ""
+msgstr "Random Image"
 
 #: random-image-block.php:92
 msgid "Album:"
-msgstr ""
+msgstr "Albumi:"
 
 #: random-image-block.php:125
 msgid "Widget Title"
-msgstr ""
+msgstr "Widget osasto"
 
 #: random-image-block.php:128
 msgid "Center the Image?"
-msgstr ""
+msgstr "Center Image?"
 
 #: random-image-block.php:130
 msgid ""
 "Select a Post Category to display images from, or All Categories to disable "
 "filtering"
-msgstr ""
+msgstr "Valitse Lähetä luokka voi näyttää kuvia, tai Kaikki kategoriat poistaa suodatuksen"
 
 #: random-image-block.php:131
 msgid "All Categories"
-msgstr ""
+msgstr "Kaikki luokat"
 
 #: random-image-block.php:135
 msgid "Show Advanced Options"
-msgstr ""
+msgstr "Näytä lisäasetukset"
 
 #: random-image-block.php:153
 msgid "Album Options:"
-msgstr ""
+msgstr "Albumin Valinnat:"
 
 #: random-image-block.php:155
 msgid "Link to the Album vs Image?"
-msgstr ""
+msgstr "Linkki Albumi vs kuva?"
 
 #: random-image-block.php:158
 msgid "Display name of Album?"
-msgstr ""
+msgstr "Näyttönimen Album?"
 
 #: random-image-block.php:160
 msgid "Meta Data to Display:"
-msgstr ""
+msgstr "Meta näytettävät tiedot:"
 
 #: random-image-block.php:162
 msgid "Show the Images Title?"
-msgstr ""
+msgstr "Näytä kuvat Otsikko?"
 
 #: random-image-block.php:165
 msgid "Show the Images Caption?"
-msgstr ""
+msgstr "Näytä kuvat Kuvateksti?"
 
 #: random-image-block.php:168
 msgid "Show Images Description?"
-msgstr ""
+msgstr "Näytä kuvat kuvaus?"
+

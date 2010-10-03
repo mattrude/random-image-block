@@ -5,7 +5,7 @@ Plugin URI: http://mattrude.com/projects/random-image-block/
 Tags: gallery, images, image block, plugin, widget
 Requires at least: 2.9
 Tested up to: 3.0
-Stable tag: 0.8
+Stable tag: 0.9.1
 
 A small plugin that will display a random image from your native WordPress photo galley or in-beaded images.
 
@@ -19,13 +19,20 @@ The Random Image Block plugin works with WordPress 3.0+ in both single and multi
 
 This Plugin is fully translated into the following languages:
 
+* Arabic
+* Czech
+* Finnish
 * French
+* Danish
+* Dutch
 * German
+* Indonesian
 * Italian
 * Portuguese
+* Russian
 * Spanish
 
-If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me](http://mattrude.com/contact-me/).
+If you would like to help translating this plugin, or you see a problem with the current translation, please see my [Translation](http://translate.mattrude.com/projects/random-image-block) page, and/or [contact me](http://mattrude.com/contact-me/).
 
 = Wanted Features =
 
@@ -60,7 +67,7 @@ A: No, you may only display a single category per widget
 A: Make sure the category you have selected has pictures in it, if it doesn't, nothing will be displayed.
 
 = Q: Will this plugin work with WP Super Cache enabled? =
-A: Unfortunately, no. [WP Super Cache](http://wordpress.org/extend/plugins/wp-super-cache/) caches all php built html pages for quicker page loads. Since the Random Image Block is built directly into the html page, with WP Super Cache enabled, you will see the same random image on the same page until the cache refreshes. Each page will still have a diffrent image, but they will not update.  Currently there is no work around.
+A: Unfortunately, no. [WP Super Cache](http://wordpress.org/extend/plugins/wp-super-cache/) caches all php built html pages for quicker page loads. Since the Random Image Block is built directly into the html page, with WP Super Cache enabled, you will see the same random image on the same page until the cache refreshes. Each page will still have a diffrent image, but they will not update for each page refresh.  Currently there is no work around.
 
 == Screenshots ==
 
@@ -69,6 +76,12 @@ A: Unfortunately, no. [WP Super Cache](http://wordpress.org/extend/plugins/wp-su
 
 == Changelog ==
 
+= Version 0.9.1 =
+* Fixed bug where default options were always on.
+= Version 0.9 =
+* Added Advanced Options
+* Allow for custom Meta data
+* Added Tranlation for: Arabic, Czech, Danish, Dutch, Finnish, Indonesian, & Russian
 = Version 0.8 =
 * Added ability to link to the album vs the image.
 = Version 0.7 =
