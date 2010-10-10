@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: safecss 1.o\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-18 15:18-0500\n"
+"POT-Creation-Date: 2010-10-10 12:54-0500\n"
 "PO-Revision-Date: 2010-09-18 14:57-0500\n"
 "Last-Translator: Matt Rude <matt@mattrude.com>\n"
 "Language-Team: Matt Rude <matt@mattrude.com>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: random-image-block.php:22
+#: random-image-block.php:20
 msgid "Random Image Widget"
-msgstr "Widget Random Image"
+msgstr "Random Widget de Imagem"
 
-#: random-image-block.php:23
+#: random-image-block.php:21
 msgid "Displays a random gallery image."
 msgstr "Apresenta uma galeria de imagens aleatórias."
 
-#: random-image-block.php:41
+#: random-image-block.php:39
 msgid "Random Image"
 msgstr "Random Image"
 
-#: random-image-block.php:92
+#: random-image-block.php:90
 msgid "Album:"
 msgstr "Album:"
 
@@ -38,13 +38,13 @@ msgstr "Widget título"
 
 #: random-image-block.php:128
 msgid "Center the Image?"
-msgstr "Centralizar a imagem?"
+msgstr "O centro da imagem?"
 
 #: random-image-block.php:130
 msgid ""
 "Select a Post Category to display images from, or All Categories to disable "
 "filtering"
-msgstr "Selecione uma categoria para visualizar as imagens, ou todas as categorias para desativar a filtragem"
+msgstr "Selecione uma categoria Post para exibir imagens de, ou todas as categorias para desativar a filtragem"
 
 #: random-image-block.php:131
 msgid "All Categories"
@@ -52,15 +52,15 @@ msgstr "Todas as categorias"
 
 #: random-image-block.php:135
 msgid "Show Advanced Options"
-msgstr "Show Advanced Options"
+msgstr "Mostrar opções avançadas"
 
 #: random-image-block.php:153
 msgid "Album Options:"
-msgstr "Opções Album:"
+msgstr "Opções álbum:"
 
 #: random-image-block.php:155
 msgid "Link to the Album vs Image?"
-msgstr "Link para a imagem vs Album?"
+msgstr "Link para o Álbum vs imagem?"
 
 #: random-image-block.php:158
 msgid "Display name of Album?"
@@ -68,7 +68,7 @@ msgstr "Mostra o nome do álbum?"
 
 #: random-image-block.php:160
 msgid "Meta Data to Display:"
-msgstr "Meta para exibir os dados:"
+msgstr "Meta Data de exibição:"
 
 #: random-image-block.php:162
 msgid "Show the Images Title?"
@@ -80,5 +80,5 @@ msgstr "Imagens mostram a legenda?"
 
 #: random-image-block.php:168
 msgid "Show Images Description?"
-msgstr "Mostrar descrição de imagens?"
+msgstr "Mostrar imagens Descrição?"
 

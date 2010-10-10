@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: safecss 1.o\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-18 15:18-0500\n"
+"POT-Creation-Date: 2010-10-10 12:54-0500\n"
 "PO-Revision-Date: 2010-09-18 14:57-0500\n"
 "Last-Translator: Matt Rude <matt@mattrude.com>\n"
 "Language-Team: Matt Rude <matt@mattrude.com>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: random-image-block.php:22
+#: random-image-block.php:20
 msgid "Random Image Widget"
 msgstr ""
 
-#: random-image-block.php:23
+#: random-image-block.php:21
 msgid "Displays a random gallery image."
 msgstr ""
 
-#: random-image-block.php:41
+#: random-image-block.php:39
 msgid "Random Image"
 msgstr ""
 
-#: random-image-block.php:92
+#: random-image-block.php:90
 msgid "Album:"
 msgstr ""
 

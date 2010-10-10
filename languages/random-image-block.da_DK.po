@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: safecss 1.o\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-18 15:18-0500\n"
+"POT-Creation-Date: 2010-10-10 12:54-0500\n"
 "PO-Revision-Date: 2010-09-18 14:57-0500\n"
 "Last-Translator: Matt Rude <matt@mattrude.com>\n"
 "Language-Team: Matt Rude <matt@mattrude.com>\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: random-image-block.php:22
+#: random-image-block.php:20
 msgid "Random Image Widget"
-msgstr "Random Image Widget"
+msgstr "Tilfældigt billede widget"
 
-#: random-image-block.php:23
+#: random-image-block.php:21
 msgid "Displays a random gallery image."
-msgstr "Viser en tilfældig galleri billede."
+msgstr "Viser et tilfældigt galleri billede."
 
-#: random-image-block.php:41
+#: random-image-block.php:39
 msgid "Random Image"
 msgstr "Random Image"
 
-#: random-image-block.php:92
+#: random-image-block.php:90
 msgid "Album:"
 msgstr "Album:"
 
@@ -38,13 +38,13 @@ msgstr "Widget Titel"
 
 #: random-image-block.php:128
 msgid "Center the Image?"
-msgstr "Center billedet?"
+msgstr "Centrer billedet?"
 
 #: random-image-block.php:130
 msgid ""
 "Select a Post Category to display images from, or All Categories to disable "
 "filtering"
-msgstr "Vælg en Post kategori til at vise billeder fra eller Alle kategorier for at deaktivere filtrering"
+msgstr "Vælg en Post kategori til at vise billeder fra, eller Alle kategorier for at deaktivere filtrering"
 
 #: random-image-block.php:131
 msgid "All Categories"
@@ -60,23 +60,23 @@ msgstr "Album Valg:"
 
 #: random-image-block.php:155
 msgid "Link to the Album vs Image?"
-msgstr "Link til Album vs Image?"
+msgstr "Link til albummet vs Image?"
 
 #: random-image-block.php:158
 msgid "Display name of Album?"
-msgstr "Display navn Album?"
+msgstr "Visningsnavn på albummet?"
 
 #: random-image-block.php:160
 msgid "Meta Data to Display:"
-msgstr "Meta Data til Display:"
+msgstr "Meta data til at vise:"
 
 #: random-image-block.php:162
 msgid "Show the Images Title?"
-msgstr "Vis billeder afsnit?"
+msgstr "Vis billederne titel?"
 
 #: random-image-block.php:165
 msgid "Show the Images Caption?"
-msgstr "Vis billeder Caption?"
+msgstr "Vis billederne Caption?"
 
 #: random-image-block.php:168
 msgid "Show Images Description?"
