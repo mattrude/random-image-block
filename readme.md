@@ -25,7 +25,7 @@ This Plugin is fully translated into the following languages:
 *   Russian
 *   Spanish
 
-If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me][3].</div> 
+If you would like to help translating this plugin, or you see a problem with the current translation, please [contact me][3].
 
   
 ## Download
