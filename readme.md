@@ -56,8 +56,7 @@ If your using git, make sure to hit the
 
 <img class="alignright" title="screenshot-2" src="images/screenshot-2.png" alt="" width="264" height="504" /> <img class="" title="screenshot-1" src="images/screenshot-1.png" alt="" width="250" height="332" /> 
 
-  
-<a id=Dependencies name=Dependencies></a> 
+
 ## Dependencies
 
 [WordPress][1] 2.9+
