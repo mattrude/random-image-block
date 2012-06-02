@@ -44,7 +44,10 @@ The Current Version is 0.9.1 released on October 3rd, 2010.
 *   [Random Image Block . Version 0.1][13]
 
 You can also clone the project with [Git][14] by running: 
-<pre>$ git clone git://github.com/mattrude/random-image-block</pre> If your using git, make sure to hit the 
+
+    $ git clone git://github.com/mattrude/random-image-block
+
+If your using git, make sure to hit the 
 
 [Random Image Block's github page][15]. 
 
