@@ -3,7 +3,7 @@
 Plugin Name: Random Image Block
 Plugin URI: http://mattrude.com/projects/random-image-block/
 Description: Display a random image from your native WordPress photo galley or in-beaded images.
-Version: 0.9.1
+Version: 0.9.2
 Author: Matt Rude
 Author URI: http://mattrude.com/
 */
@@ -87,7 +87,7 @@ class random_image_widget extends WP_Widget {
             echo "</a></p>";
             if ( $riw_display_caption == "on" ) { echo "<p class='random-image-caption'><i>$attachment->post_excerpt</i></p>"; }
             if ( $riw_display_description == "on" ) { echo "<p class='random-image-description'>$attachment->post_content</p>"; }
-            if ( $riw_display_album == "on" ) { echo "<p class='random-image-album'><small>".__('Album:','random-image-block')." <a href=".get_permalink( $albumid ).">".get_the_title($albumid)."</a></small></p>"; }
+            if ( $riw_display_album == "on" ) { echo "<p class='random-image-album'><small>"._x('Album:','A location where pictures live','random-image-block')." <a href=".get_permalink( $albumid ).">".get_the_title($albumid)."</a></small></p>"; }
           echo "</div>";
           echo $after_widget;
           break;

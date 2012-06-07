@@ -30,8 +30,9 @@ If you would like to help translating this plugin, or you see a problem with the
   
 ## Download
 
-The Current Version is 0.9.1 released on October 3rd, 2010.
+The Current Version is 0.9.2 released on June 7th, 2012.
 
+*   [Random Image Block . Version 0.9.2][18]
 *   [Random Image Block . Version 0.9.1][4]
 *   [Random Image Block . Version 0.9][5]
 *   [Random Image Block . Version 0.8][6]
@@ -97,6 +98,11 @@ As with most WordPress plugins, there is two ways of installing this plugin.
 *   Unfortunately, no. WP Super Cache caches all php built html pages for quicker page loads. Since the Random Image Block is built directly into the html page, with WP Super Cache enabled, you will see the same random image on the same page until the cache refreshes. Each page will still have a diffrent image, but they will not update. Currently there is no work around.
 
 ## Change Log
+
+### Version 0.9.2
+
+* Small changes to I18N
+* Bumped tested version to WordPress 3.4
 
 ### Version 0.9.1
 
@@ -176,3 +182,4 @@ of this license document, but changing it is not allowed.</pre>
  [15]: http://github.com/mattrude/random-image-block
  [16]: http://www.gnu.org/licenses/gpl-2.0.html
  [17]: http://github.com/mattrude/
+ [18]: http://github.com/downloads/mattrude/random-image-block/random-image-block.0.9.2.zip
