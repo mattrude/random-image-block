@@ -55,7 +55,7 @@ If your using git, make sure to hit the
   
 ## Screen Shots
 
-<img class="alignright" title="screenshot-2" src="images/screenshot-2.png" alt="" width="264" height="504" /> <img class="" title="screenshot-1" src="images/screenshot-1.png" alt="" width="250" height="332" /> 
+<img class="alignright" title="screenshot-2" src="https://raw.github.com/mattrude/random-image-block/master/screenshot-2.png" alt="" width="264" height="504" /> <img class="" title="screenshot-1" src="https://raw.github.com/mattrude/random-image-block/master/screenshot-1.png" alt="" width="250" height="332" /> 
 
 
 ## Dependencies
