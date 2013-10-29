@@ -6,6 +6,7 @@ Description: Display a random image from your native WordPress photo galley or i
 Version: 0.9.2
 Author: Matt Rude
 Author URI: http://mattrude.com/
+GitHub Plugin URI: mattrude/random-image-block
 */
 
 
